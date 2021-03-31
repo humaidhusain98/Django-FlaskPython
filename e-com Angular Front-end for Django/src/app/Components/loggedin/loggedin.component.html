@@ -1,0 +1,155 @@
+<h2>Saved Addresses</h2>
+<br>
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal">Add Address</button>
+<br>
+<br>
+<br>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Enter Address Details Below</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        
+        <div class="modal-body">
+          <form #addressForm="ngForm" >
+            <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Name:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="name" [(ngModel)]="addr.name" required class="form-control"  name="Name" placeholder="Enter Full Name" >
+              </div>
+             </div>
+             </div>
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Phone Number:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text"  required class="form-control"  [(ngModel)]="addr.phonenumber" name="phone" placeholder="Enter Phone Number" >
+              </div>
+             </div>
+             </div>
+
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Address Line 1:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="address1" required class="form-control" [(ngModel)]="addr.addrLine1" name="address1" placeholder="Enter Address" >
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Address Line 2:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="address2" required class="form-control" [(ngModel)]="addr.addrLine2" name="address2" placeholder="Enter Address" >
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Landmark:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="landmark" required class="form-control" [(ngModel)]="addr.landmark"  name="landmark" placeholder="Enter Landmark" >
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>City:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="city" required class="form-control" [(ngModel)]="addr.city" name="city" placeholder="Enter Your Current City" >
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>State:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="state" required class="form-control"  [(ngModel)]="addr.state" name="state" placeholder="Enter Your State" >
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Country:</strong>
+                </div>
+                <div class="col-10">
+              <input type="text" id="country" required class="form-control" [(ngModel)]="addr.country" name="country" placeholder="Enter Country" >
+
+              </div>
+             </div>
+             </div>
+
+             <div class="form-group">
+              <div class="row">
+                <div class="col-2">
+              <strong>Pin Code:</strong>
+                </div>
+                <div class="col-10">
+              <input type="number" id="pin" required class="form-control"  [(ngModel)]="addr.pincode" name="pin" placeholder="Enter Pincode" >
+              </div>
+             </div>
+             </div>
+            </form>
+            
+
+
+          
+        </div>
+      
+        <div class="modal-footer">
+          <button type="button" (click)="addAddress()" data-dismiss="modal" class="btn btn-dark">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-3" *ngFor="let address of addresses">
+        <div class="card"  style="width: 18rem;">
+            <div class="card-header">
+              <h3><strong>Address</strong></h3>
+              <button type="button" (click)="removeUserLink(address)" class="btn btn-dark">Remove</button>
+            </div>
+            <div class="card-body">
+              <p class="card-text"><strong>Name :</strong>{{address.name}} </p>
+              <p class="card-text"><strong>Phone Number:</strong>{{address.phonenumber}} </p>
+              <p class="card-text"><strong>Address 1:</strong>{{address.addrLine1}} </p>
+              <p class="card-text"><strong>Address 2:</strong>{{address.addrLine2}} </p>
+              <p class="card-text"><strong>Landmark :</strong>{{address.landmark}} </p>
+              <p class="card-text"><strong>City :</strong>{{address.city}} </p>
+              <p class="card-text"><strong>State :</strong>{{address.state}} </p>
+              <p class="card-text"><strong>Country :</strong>{{address.country}} </p>
+              <p class="card-text"><strong>Pin Code :</strong>{{address.pincode}} </p>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,97 @@
+navbar{
+    padding: .6rem;
+  
+  }
+  
+  .navbar-nav li{
+    padding-right: 20px;
+  
+  }
+  
+  .nav-link{
+    font-size: 1em;
+  }
+
+  #search-bar{
+      position: relative;
+      left: 100px;
+      width: 400px;
+      height: 30px;
+  }
+
+  .fa-shopping-cart{
+      font-size: 1.6em;
+      color:black;
+  }
+
+  .fa-heart{
+    font-size: 1.6em;
+    color:red;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background:grey;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .fa-map-marker{
+      font-size: 1.6em;
+      color: grey;
+  }
+
+  .fa-user{
+      font-size: 1.6em;
+      color: blue;
+  }
+
+  .fa-home{
+    font-size: 1.6em;
+    color:black;
+}
+    
+
+  
+
+  @media (max-width: 992px) {
+      #search-bar{
+        position: relative;
+        display: none;
+        left: 200px;
+        right:200px;
+        width: 400px;
+        height: 30px;
+    }
+    }
